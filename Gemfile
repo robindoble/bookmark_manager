@@ -11,6 +11,6 @@ gem 'cucumber'
 gem 'capybara'
 gem 'rspec'
 gem 'shotgun'
-
+gem 'database_cleaner'
 
 end
