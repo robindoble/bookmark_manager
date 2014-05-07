@@ -1,14 +1,21 @@
-require 'sinatra'
+require 'sinatra/base'
+require 'data_mapper'
 
-# env = ENV["RACK_ENV"] || "development"
 
-# DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
+env = ENV["RACK_ENV"] || "development"
+DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
-# require './lib/link'
+require './lib/link'
 
-# DataMapper.finalize
-# DataMapper.auto_upgrade!
+DataMapper.finalize
+DataMapper.auto_upgrade!
+
+class Bookmark < Sinatra::Base
+
 
 get '/' do
 	erb :index
+end
+
+
 end

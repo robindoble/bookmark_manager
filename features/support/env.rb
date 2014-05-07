@@ -1,4 +1,4 @@
-require_relative '../../my_app'
+require_relative '../../bookmark'
  
 require "Capybara"
 require "Capybara/cucumber"
@@ -9,6 +9,6 @@ RSpec.configure do |config|
 end
 
 World do 
-  Capybara.app = MyApp
+  Capybara.app = Bookmark
   # include RSpec::Matchers
 end
