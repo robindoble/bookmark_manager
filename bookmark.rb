@@ -12,8 +12,18 @@ DataMapper.auto_upgrade!
 
 class Bookmark < Sinatra::Base
 
+post '/' do 
+# puts params[:title]
+# puts params[:url]
+Link.create(:title => params[:title],:url => params[:url])
+puts params[:title]
+puts params[:url]
+	
+redirect to("/")
+end
 
 get '/' do
+	@links = Link.all
 	erb :index
 end
 

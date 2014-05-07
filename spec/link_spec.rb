@@ -3,10 +3,7 @@ require 'spec_helper'
 
 describe Link do
 
-	context 'demo of how datamapper works' do
-
-		
-			
+	context 'demo of how datamapper works' do			
 			it 'should be created and then retrieved from the DB' do 
 			expect(Link.count).to eq(0)
 			Link.create(:title => "Makers Academy", :url => "http://www.makersacademy.com/")
@@ -17,8 +14,19 @@ describe Link do
 			link.destroy
 			expect(Link.count).to eq(0)
 			end
+	end
+
+
+	context 'creating a link on the homepage' do 
+
+		
+
+
 
 
 	end
+
+
+
 
 end
